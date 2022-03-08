@@ -11,6 +11,7 @@ import {
   Text,
 } from '@mantine/core';
 import Navigation from '../Navigation';
+import FooterLayout from './FooterLayout';
 
 const useStyles = createStyles((theme) => ({
   navbar: {
@@ -67,7 +68,7 @@ const navLinks = [
   },
 ];
 
-export default function PageLayout({ children, padding = true }) {
+export default function PageLayout({ children }) {
   const { classes } = useStyles();
   const [opened, setOpened] = useState(false);
 
@@ -130,17 +131,22 @@ export default function PageLayout({ children, padding = true }) {
             <Navigation type="header" items={navLinks} />
           </Navbar>
         }
-        sx={
-          padding
-            ? null
-            : () => ({
-                main: {
-                  padding: '60px 0 0 0',
-                },
-              })
-        }
+        sx={() => ({
+          main: {
+            padding: '60px 0 0 0',
+          },
+        })}
       >
-        {children}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            height: '100%',
+          }}
+        >
+          <div style={{ flexGrow: 1 }}>{children}</div>
+          <FooterLayout />
+        </div>
       </AppShell>
     </MantineProvider>
   );

@@ -17,7 +17,7 @@ const home = () => {
   const largerThanBreakpoint = useMediaQuery('(min-width: 850px)');
 
   return (
-    <PageLayout padding={false}>
+    <PageLayout>
       <Grid columns={10} gutter={0}>
         <Grid.Col
           span={largerThanBreakpoint ? 6 : 10}
