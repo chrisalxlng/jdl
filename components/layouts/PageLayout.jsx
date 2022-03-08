@@ -29,15 +29,10 @@ const useStyles = createStyles((theme) => ({
 const Logo = () => (
   <Link href="/">
     <div style={{ height: 'min-content', display: 'flex', cursor: 'pointer' }}>
-      <Text
-        style={{ fontStyle: 'italic' }}
-        size="xl"
-        color="#518985"
-        weight={900}
-      >
+      <Text sx={{ fontStyle: 'italic' }} size="xl" color="#518985" weight={900}>
         jdl
       </Text>
-      <Text style={{ fontStyle: 'italic' }} size="xl">
+      <Text sx={{ fontStyle: 'italic' }} size="xl">
         ang.de
       </Text>
     </div>
@@ -72,7 +67,7 @@ const navLinks = [
   },
 ];
 
-export default function PageLayout({ children }) {
+export default function PageLayout({ children, padding = true }) {
   const { classes } = useStyles();
   const [opened, setOpened] = useState(false);
 
@@ -134,6 +129,15 @@ export default function PageLayout({ children }) {
           >
             <Navigation type="header" items={navLinks} />
           </Navbar>
+        }
+        sx={
+          padding
+            ? null
+            : () => ({
+                main: {
+                  padding: '60px 0 0 0',
+                },
+              })
         }
       >
         {children}
