@@ -10,6 +10,8 @@ import {
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import PageLayout from '../components/layouts/PageLayout';
+import TextLink from '../components/util/TextLink';
+import Paragraph from '../components/util/Paragraph';
 
 const home = () => {
   const largerThanBreakpoint = useMediaQuery('(min-width: 850px)');
@@ -86,28 +88,30 @@ const home = () => {
         </Grid.Col>
       </Grid>
       <Container mt={50} padding="xl" size={560}>
-        <Title order={2} mb={20}>
-          Kurzprofil
-        </Title>
-        <Text my={25}>
+        <Paragraph title="Kurzprofil">
           Nach seiner Berufsausbildung zum Industriekaufmann mit anschließender
           halbjähriger Auslandstätigkeit, studierte J. D. Lang
           Betriebswirtschaft und Soziologie an der Goethe-Universität
           Frankfurt/Main.
-        </Text>
-        <Text my={25}>
+        </Paragraph>
+        <Paragraph>
           In seinen beruflichen Stationen, überwiegend bei multinational
-          erfolgreichen Top-Unternehmen in verschiedenen Management-Positionen
-          im operativen und strategischen Marketing (B2C und B2B), entwickelte
-          er sich zielgerichtet zu einem vielseitigen Marketing-Manager (zuletzt
-          auch in beratender Funktion als Management-Consultant) mit fundiertem,
-          auch internationalen, Background in Theorie & Praxis.
-        </Text>
-        <Text my={25}>
+          erfolgreichen{' '}
+          <TextLink href="/background/berufliche-erfahrungen">
+            Top-Unternehmen
+          </TextLink>{' '}
+          in verschiedenen Management-Positionen im operativen und strategischen
+          Marketing (B2C und B2B), entwickelte er sich zielgerichtet zu einem
+          vielseitigen Marketing-Manager (zuletzt auch in beratender Funktion
+          als Management-Consultant) mit fundiertem, auch internationalen,{' '}
+          <TextLink href="/background/ausbildung">Background</TextLink> in
+          Theorie & Praxis.
+        </Paragraph>
+        <Paragraph>
           Heute erholt sich Lang von den Folgen zweier schwerer Schlaganfälle
           als Privatier in der Anonymität der Großstadt seiner Wahl-Heimat
           Berlin.
-        </Text>
+        </Paragraph>
       </Container>
     </PageLayout>
   );
