@@ -144,8 +144,10 @@ export default function PageLayout({ children }) {
             height: '100%',
           }}
         >
-          <div style={{ flexGrow: 1 }}>{children}</div>
-          <FooterLayout />
+          <div style={{ flexGrow: 1, backgroundColor: '#F8F9FA' }}>
+            {children}
+          </div>
+          <FooterLayout style={{ backgroundColor: '#F8F9FA' }} />
         </div>
       </AppShell>
     </MantineProvider>

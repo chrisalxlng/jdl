@@ -12,6 +12,7 @@ const Navigation = ({ type, items }) => {
       {items.map((item) =>
         item.items.length ? (
           <Menu
+            key={item.path}
             control={
               <Button
                 variant={
@@ -25,7 +26,7 @@ const Navigation = ({ type, items }) => {
             delay={100}
           >
             {item.items.map((subitem) => (
-              <Menu.Item>
+              <Menu.Item key={subitem.path}>
                 <Link href={item.path + subitem.path}>
                   <Text
                     size="sm"
@@ -42,7 +43,7 @@ const Navigation = ({ type, items }) => {
             ))}
           </Menu>
         ) : (
-          <Link href={item.path}>
+          <Link key={item.path} href={item.path}>
             <Button
               variant={router.pathname === item.path ? 'light' : 'subtle'}
             >
@@ -56,7 +57,7 @@ const Navigation = ({ type, items }) => {
     <>
       {items.map((item, id) =>
         item.items.length ? (
-          <div style={{ width: '100%' }}>
+          <div key={item.path} style={{ width: '100%' }}>
             <Button
               variant={
                 router.pathname.startsWith(item.path) ? 'light' : 'subtle'
@@ -74,7 +75,7 @@ const Navigation = ({ type, items }) => {
             </Button>
             <Collapse in={id === opened}>
               {item.items.map((subitem) => (
-                <Link href={item.path + subitem.path}>
+                <Link key={subitem.path} href={item.path + subitem.path}>
                   <Button
                     variant={
                       router.pathname === item.path + subitem.path
@@ -96,7 +97,7 @@ const Navigation = ({ type, items }) => {
             </Collapse>
           </div>
         ) : (
-          <Link href={item.path}>
+          <Link key={item.path} href={item.path}>
             <Button
               variant={router.pathname === item.path ? 'light' : 'subtle'}
               sx={() => ({

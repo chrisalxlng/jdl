@@ -1,11 +1,11 @@
 import { Container, Divider, Text } from '@mantine/core';
 import React from 'react';
 
-const FooterLayout = () => {
+const FooterLayout = ({ component, ...rest }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div>
+    <div {...rest}>
       <Container mt={40} mb={20} padding={20} sx={{ maxWidth: '100%' }}>
         <Divider mb={20} />
         <Container padding="xl" sx={{ maxWidth: '100%' }}>
