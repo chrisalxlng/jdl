@@ -12,6 +12,7 @@ import { useMediaQuery } from '@mantine/hooks';
 import PageLayout from '../components/layouts/PageLayout';
 import TextLink from '../components/util/TextLink';
 import Paragraph from '../components/util/Paragraph';
+import SectionLayout from '../components/layouts/SectionLayout';
 
 const home = () => {
   const largerThanBreakpoint = useMediaQuery('(min-width: 850px)');
@@ -87,8 +88,8 @@ const home = () => {
           </Container>
         </Grid.Col>
       </Grid>
-      <Container mt={50} padding="xl" size={560}>
-        <Paragraph title="Kurzprofil">
+      <SectionLayout type="paragraph" title="Kurzprofil">
+        <Paragraph>
           Nach seiner Berufsausbildung zum Industriekaufmann mit anschließender
           halbjähriger Auslandstätigkeit, studierte J. D. Lang
           Betriebswirtschaft und Soziologie an der Goethe-Universität
@@ -112,7 +113,7 @@ const home = () => {
           als Privatier in der Anonymität der Großstadt seiner Wahl-Heimat
           Berlin.
         </Paragraph>
-      </Container>
+      </SectionLayout>
     </PageLayout>
   );
 };

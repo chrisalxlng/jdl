@@ -8,15 +8,6 @@ import SectionLayout from '../../components/layouts/SectionLayout';
 const beruflicheErfahrungen = () => (
   <PageLayout>
     <ArticleLayout title="Berufliche Erfahrungen" lastUpdated="09.03.2022">
-      <SectionLayout>
-        <Blockquote cite="– Immanuel Kant">
-          Alles Wissen stammt aus Erfahrung.
-        </Blockquote>
-        <Blockquote cite="– Jesus Sirach 34, 10-11">
-          Wer nichts erfahren hat, weiß wenig, der Vielgereiste nimmt zu an
-          Klugheit.
-        </Blockquote>
-      </SectionLayout>
       <SectionLayout title={'Erfahrungs-Mix: "Beste Referenzen"'}>
         <Group>
           <LogoTitleSubtitleCard
@@ -55,6 +46,15 @@ const beruflicheErfahrungen = () => (
             subtitle="T.I.M.E. Communication Services AG, Bad Homburg/Barcelona/Madrid"
           />
         </Group>
+      </SectionLayout>
+      <SectionLayout>
+        <Blockquote cite="– Immanuel Kant">
+          Alles Wissen stammt aus Erfahrung.
+        </Blockquote>
+        <Blockquote cite="– Jesus Sirach 34, 10-11">
+          Wer nichts erfahren hat, weiß wenig, der Vielgereiste nimmt zu an
+          Klugheit.
+        </Blockquote>
       </SectionLayout>
       <SectionLayout title="Studentenjobs während des Studiums (Auswahl)">
         <Group>
