@@ -7,6 +7,9 @@ const Navigation = ({ type, items }) => {
   const [opened, setOpened] = useState(-1);
   const router = useRouter();
 
+  const isActivePath = (path) =>
+    path === '/' ? router.pathname === path : router.pathname.startsWith(path);
+
   return type === 'navbar' ? (
     <>
       {items.map((item) =>
@@ -14,11 +17,7 @@ const Navigation = ({ type, items }) => {
           <Menu
             key={item.path}
             control={
-              <Button
-                variant={
-                  router.pathname.startsWith(item.path) ? 'light' : 'subtle'
-                }
-              >
+              <Button variant={isActivePath(item.path) ? 'light' : 'subtle'}>
                 {item.label}
               </Button>
             }
@@ -31,7 +30,7 @@ const Navigation = ({ type, items }) => {
                   <Text
                     size="sm"
                     color={
-                      router.pathname === item.path + subitem.path
+                      isActivePath(item.path + subitem.path)
                         ? 'dark-teal'
                         : 'black'
                     }
@@ -44,9 +43,7 @@ const Navigation = ({ type, items }) => {
           </Menu>
         ) : (
           <Link key={item.path} href={item.path}>
-            <Button
-              variant={router.pathname === item.path ? 'light' : 'subtle'}
-            >
+            <Button variant={isActivePath(item.path) ? 'light' : 'subtle'}>
               {item.label}
             </Button>
           </Link>
@@ -59,9 +56,7 @@ const Navigation = ({ type, items }) => {
         item.items.length ? (
           <div key={item.path} style={{ width: '100%' }}>
             <Button
-              variant={
-                router.pathname.startsWith(item.path) ? 'light' : 'subtle'
-              }
+              variant={isActivePath(item.path) ? 'light' : 'subtle'}
               fullWidth
               rightIcon={<ChevronIcon />}
               onClick={() => (id === opened ? setOpened(-1) : setOpened(id))}
@@ -78,7 +73,7 @@ const Navigation = ({ type, items }) => {
                 <Link key={subitem.path} href={item.path + subitem.path}>
                   <Button
                     variant={
-                      router.pathname === item.path + subitem.path
+                      isActivePath(item.path + subitem.path)
                         ? 'light'
                         : 'subtle'
                     }
@@ -99,7 +94,7 @@ const Navigation = ({ type, items }) => {
         ) : (
           <Link key={item.path} href={item.path}>
             <Button
-              variant={router.pathname === item.path ? 'light' : 'subtle'}
+              variant={isActivePath(item.path) ? 'light' : 'subtle'}
               sx={() => ({
                 div: {
                   justifyContent: 'start',
