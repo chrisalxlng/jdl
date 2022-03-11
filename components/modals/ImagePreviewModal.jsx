@@ -1,5 +1,6 @@
-import { Image, Modal } from '@mantine/core';
 import React from 'react';
+import { Modal } from '@mantine/core';
+import Image from '../utils/Image';
 
 const ImagePreviewModal = ({
   opened,
@@ -13,6 +14,11 @@ const ImagePreviewModal = ({
     onClose={() => setOpened(false)}
     title={title}
     centered
+    sx={() => ({
+      '.mantine-Modal-body': {
+        height: '60vh',
+      },
+    })}
   >
     <Image src={image} caption={caption} radius="md" />
   </Modal>
