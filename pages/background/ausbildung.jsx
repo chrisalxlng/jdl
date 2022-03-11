@@ -5,7 +5,7 @@ import LogoTitleSubtitleCard from '../../components/cards/LogoTitleSubtitleCard'
 import ArticleLayout from '../../components/layouts/ArticleLayout';
 import PageLayout from '../../components/layouts/PageLayout';
 import SectionLayout from '../../components/layouts/SectionLayout';
-import TextLink from '../../components/util/TextLink';
+import TextLink from '../../components/utils/TextLink';
 
 const ausbildung = () => (
   <PageLayout>

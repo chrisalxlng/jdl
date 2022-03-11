@@ -1,13 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import {
-  Card,
-  Container,
-  Divider,
-  Group,
-  Image,
-  Text,
-  Tooltip,
-} from '@mantine/core';
+import { Card, Container, Divider, Group, Text, Tooltip } from '@mantine/core';
+import Image from '../utils/Image';
 
 const LogoTitleSubtitleCard = ({ logo, title, subtitle = null }) => {
   const [isTitleClamped, setTitleClamped] = useState(false);

@@ -2,7 +2,8 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper';
-import { Container, Image } from '@mantine/core';
+import { Container } from '@mantine/core';
+import Image from './Image';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -43,7 +44,7 @@ const ImageCarousel = ({ images }) => (
     >
       {images.map((image) => (
         <SwiperSlide key={image} style={{ width: 'fit-content' }}>
-          <Image src={image} height={200} fit="contain" />
+          <Image src={image} height={200} width={300} />
         </SwiperSlide>
       ))}
     </Swiper>
@@ -51,3 +52,4 @@ const ImageCarousel = ({ images }) => (
 );
 
 export default ImageCarousel;
+// fit="contain"
