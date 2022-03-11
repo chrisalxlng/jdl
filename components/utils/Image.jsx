@@ -11,7 +11,7 @@ const Image = ({
   radius = null,
   placeholder = 'skeleton',
 }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   return (
     <Container
