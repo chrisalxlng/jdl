@@ -4,10 +4,10 @@ import ArticleLayout from '../../../components/layouts/ArticleLayout';
 import PageLayout from '../../../components/layouts/PageLayout';
 import SectionLayout from '../../../components/layouts/SectionLayout';
 import ImagePreviewModal from '../../../components/modals/ImagePreviewModal';
-import ButtonLink from '../../../components/util/ButtonLink';
-import ImageCarousel from '../../../components/util/ImageCarousel';
-import Paragraph from '../../../components/util/Paragraph';
-import TextLink from '../../../components/util/TextLink';
+import ButtonLink from '../../../components/utils/ButtonLink';
+import ImageCarousel from '../../../components/utils/ImageCarousel';
+import Paragraph from '../../../components/utils/Paragraph';
+import TextLink from '../../../components/utils/TextLink';
 
 const marketingSymposium = () => {
   const [imageModalOpened, setImageModalOpened] = useState(false);
