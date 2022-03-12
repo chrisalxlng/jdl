@@ -1,17 +1,13 @@
+import React from 'react';
 import {
   Box,
   Button,
   Card,
   Container,
   Group,
-  Text,
   Textarea,
   TextInput,
-  ThemeIcon,
-  Title,
 } from '@mantine/core';
-import { EnvelopeClosedIcon, SewingPinFilledIcon } from '@radix-ui/react-icons';
-import React from 'react';
 import ArticleLayout from '../components/layouts/ArticleLayout';
 import PageLayout from '../components/layouts/PageLayout';
 import Image from '../components/utils/Image';
