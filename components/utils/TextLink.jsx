@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Text } from '@mantine/core';
 
-const TextLink = ({ href, openNewTab = false, children }) => (
+const TextLink = ({ href, openNewTab = false, arrow = false, children }) => (
   <>
     {openNewTab ? (
       <a
@@ -17,7 +17,7 @@ const TextLink = ({ href, openNewTab = false, children }) => (
           inherit
           sx={{ display: 'inline', cursor: 'pointer' }}
         >
-          {children}
+          {arrow ? <>&rarr; {children}</> : children}
         </Text>
       </a>
     ) : (
@@ -27,7 +27,7 @@ const TextLink = ({ href, openNewTab = false, children }) => (
           inherit
           sx={{ display: 'inline', cursor: 'pointer' }}
         >
-          {children}
+          {arrow ? <>&rarr; {children}</> : children}
         </Text>
       </Link>
     )}

@@ -23,9 +23,21 @@ const socialEngagements = () => {
         </SectionLayout>
         <SectionLayout title="Beispiele">
           <Timeline>
+            <Timeline.Item>
+              <Text size="sm">
+                Auf dem Wirtschafts-Gymnasium gründete JDL die Schüler-Zeitung
+                „REFLEX“ und die Schüler Union Oberursel (Taunus), zu deren
+                Vorsitzender er gewählt wurde.
+              </Text>
+            </Timeline.Item>
             <Timeline.Item title="1982">
               <Text size="sm">
-                Vorsitzender der Junge Union Oberursel (Taunus)
+                <TextLink href="/files/file-ju-vorsitzender.pdf" openNewTab>
+                  Vorsitzender der Junge Union Oberursel (Taunus)
+                </TextLink>{' '}
+                <TextLink href="/files/file-ju-machtkampf.pdf" openNewTab arrow>
+                  Mehr erfahren
+                </TextLink>
               </Text>
             </Timeline.Item>
             <Timeline.Item title="1983/84">
@@ -57,7 +69,10 @@ const socialEngagements = () => {
                 Initiator und Mitglied der geschäftsführenden Projektleitung des
                 1. Marketing- Symposium Frankfurt/M.-Leipzig. Von Studenten für
                 Studenten.{' '}
-                <TextLink href="/background/social-engagements/marketing-symposium">
+                <TextLink
+                  href="/background/social-engagements/marketing-symposium"
+                  arrow
+                >
                   Mehr erfahren
                 </TextLink>
               </Text>
@@ -70,7 +85,7 @@ const socialEngagements = () => {
                 offizielles Amt“ tätig (Engagement als „(Lebens)-SINN
                 Fluencer“), „weil „praktizierender Christ die Basis für ein
                 sinnstiftendes Leben ist“.{' '}
-                <TextLink href="https://marburger-kreis.de" openNewTab>
+                <TextLink href="https://marburger-kreis.de" openNewTab arrow>
                   Mehr erfahren
                 </TextLink>
               </Text>
