@@ -87,14 +87,14 @@ const ausbildung = () => {
               <Text weight={500} mb={5}>
                 Diplomarbeit
               </Text>
-              <TextLink href="/files/file-diplomarbeit.pdf" openNewTab>
-                <Text mb={5}>
+              <Text mb={5}>
+                <TextLink href="/files/file-diplomarbeit.pdf" openNewTab>
                   &quot;Die Kosten-Nutzen-Analyse als Instrument zur
                   wirtschaftspolitischen Beratung; die Möglichkeiten zur
                   Präjudizierung politischer Entscheidungen anhand ausgewählter
                   Beispiele.&quot;
-                </Text>
-              </TextLink>
+                </TextLink>
+              </Text>
               <Text size="sm" color="dimmed">
                 Frankfurt/Main, 1989
               </Text>
@@ -109,9 +109,12 @@ const ausbildung = () => {
               <Text weight={500}>
                 MTP – Marketing zwischen Theorie und Praxis e.V.
               </Text>
-              <TextLink href="https://www.mtp.org" openNewTab>
-                <Text mb={5}>Offizielle Website</Text>
-              </TextLink>
+
+              <Text mb={5}>
+                <TextLink href="https://www.mtp.org" openNewTab>
+                  Offizielle Website
+                </TextLink>
+              </Text>
             </List.Item>
           </List>
         </SectionLayout>

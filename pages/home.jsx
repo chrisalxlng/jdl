@@ -7,6 +7,7 @@ import Paragraph from '../components/utils/Paragraph';
 import SectionLayout from '../components/layouts/SectionLayout';
 import Image from '../components/utils/Image';
 import { getPath } from '../components/routing/routes';
+import Link from 'next/link';
 
 const home = () => {
   const largerThanBreakpoint = useMediaQuery('(min-width: 850px)');
@@ -67,12 +68,14 @@ const home = () => {
                     Marketing-Professional
                   </Text>
                 </Group>
-                <Button
-                  variant="white"
-                  sx={largerThanBreakpoint ? null : { display: 'none' }}
-                >
-                  Mehr erfahren
-                </Button>
+                <Link href="/background/ausbildung">
+                  <Button
+                    variant="white"
+                    sx={largerThanBreakpoint ? null : { display: 'none' }}
+                  >
+                    Mehr erfahren
+                  </Button>
+                </Link>
               </Group>
             </Group>
           </Container>

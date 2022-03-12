@@ -11,7 +11,7 @@ export const getRoutes = () => [
   },
   {
     label: 'Leben',
-    path: '/leben',
+    path: null,
     items: null,
     hasOwnPage: true,
     includeInNavigation: true,
@@ -19,8 +19,44 @@ export const getRoutes = () => [
   {
     label: 'Interessen',
     path: '/interessen',
-    items: null,
-    hasOwnPage: true,
+    items: [
+      {
+        label: 'Marketing',
+        path: '/marketing',
+        items: null,
+        hasOwnPage: true,
+        includeInNavigation: true,
+      },
+      {
+        label: 'Braun-HIFI-„Museum“',
+        path: null,
+        items: null,
+        hasOwnPage: false,
+        includeInNavigation: true,
+      },
+      {
+        label: 'Politik',
+        path: null,
+        items: null,
+        hasOwnPage: false,
+        includeInNavigation: true,
+      },
+      {
+        label: '„JDL-University of Life“',
+        path: null,
+        items: null,
+        hasOwnPage: false,
+        includeInNavigation: true,
+      },
+      {
+        label: 'Others',
+        path: null,
+        items: null,
+        hasOwnPage: false,
+        includeInNavigation: true,
+      },
+    ],
+    hasOwnPage: false,
     includeInNavigation: true,
   },
   {

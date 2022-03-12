@@ -22,7 +22,20 @@ const Navigation = ({ type, items }) => {
           >
             {item.items.map((subitem) => (
               <Menu.Item key={subitem.path}>
-                <Link href={item.path + subitem.path}>
+                {subitem.path ? (
+                  <Link href={item.path + subitem.path}>
+                    <Text
+                      size="sm"
+                      color={
+                        isActivePath(item.path + subitem.path)
+                          ? 'dark-teal'
+                          : 'black'
+                      }
+                    >
+                      {subitem.label}
+                    </Text>
+                  </Link>
+                ) : (
                   <Text
                     size="sm"
                     color={
@@ -33,16 +46,20 @@ const Navigation = ({ type, items }) => {
                   >
                     {subitem.label}
                   </Text>
-                </Link>
+                )}
               </Menu.Item>
             ))}
           </Menu>
-        ) : (
+        ) : item.path ? (
           <Link key={item.path} href={item.path}>
             <Button variant={isActivePath(item.path) ? 'light' : 'subtle'}>
               {item.label}
             </Button>
           </Link>
+        ) : (
+          <Button variant={isActivePath(item.path) ? 'light' : 'subtle'}>
+            {item.label}
+          </Button>
         )
       )}
     </>
@@ -65,8 +82,27 @@ const Navigation = ({ type, items }) => {
               {item.label}
             </Button>
             <Collapse in={id === opened}>
-              {item.items.map((subitem) => (
-                <Link key={subitem.path} href={item.path + subitem.path}>
+              {item.items.map((subitem) =>
+                subitem.path ? (
+                  <Link key={subitem.path} href={item.path + subitem.path}>
+                    <Button
+                      variant={
+                        isActivePath(item.path + subitem.path)
+                          ? 'light'
+                          : 'subtle'
+                      }
+                      fullWidth
+                      sx={() => ({
+                        div: {
+                          justifyContent: 'start',
+                          paddingLeft: 20,
+                        },
+                      })}
+                    >
+                      {subitem.label}
+                    </Button>
+                  </Link>
+                ) : (
                   <Button
                     variant={
                       isActivePath(item.path + subitem.path)
@@ -83,11 +119,11 @@ const Navigation = ({ type, items }) => {
                   >
                     {subitem.label}
                   </Button>
-                </Link>
-              ))}
+                )
+              )}
             </Collapse>
           </div>
-        ) : (
+        ) : item.path ? (
           <Link key={item.path} href={item.path}>
             <Button
               variant={isActivePath(item.path) ? 'light' : 'subtle'}
@@ -100,6 +136,17 @@ const Navigation = ({ type, items }) => {
               {item.label}
             </Button>
           </Link>
+        ) : (
+          <Button
+            variant={isActivePath(item.path) ? 'light' : 'subtle'}
+            sx={() => ({
+              div: {
+                justifyContent: 'start',
+              },
+            })}
+          >
+            {item.label}
+          </Button>
         )
       )}
     </>
