@@ -18,7 +18,7 @@ const Navigation = ({ type, items }) => {
               </Button>
             }
             trigger="hover"
-            delay={100}
+            delay={50}
           >
             {item.items.map((subitem) => (
               <Menu.Item key={subitem.path}>
