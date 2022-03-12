@@ -7,7 +7,7 @@ import SectionLayout from '../../components/layouts/SectionLayout';
 
 const beruflicheErfahrungen = () => (
   <PageLayout>
-    <ArticleLayout title="Berufliche Erfahrungen" lastUpdated="09.03.2022">
+    <ArticleLayout title="Berufliche Erfahrungen">
       <SectionLayout title={'Erfahrungs-Mix: "Beste Referenzen"'}>
         <Group>
           <LogoTitleSubtitleCard

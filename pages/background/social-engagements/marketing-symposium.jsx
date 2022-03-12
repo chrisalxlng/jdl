@@ -22,7 +22,7 @@ const marketingSymposium = () => {
         title={'Mein "Creative Pool"'}
         caption="Die besten Ideen kommen mir, wenn mir das Wasser bis zum Hals steht..."
       />
-      <ArticleLayout title="Marketing Symposium" lastUpdated="09.03.2022">
+      <ArticleLayout title="Marketing Symposium">
         <SectionLayout
           title="Ein Stück Deutsch-deutsche Marketing-Geschichte..."
           type="paragraph"

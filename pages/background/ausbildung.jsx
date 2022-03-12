@@ -9,7 +9,7 @@ import TextLink from '../../components/utils/TextLink';
 
 const ausbildung = () => (
   <PageLayout>
-    <ArticleLayout title="Ausbildung" lastUpdated="08.03.2022">
+    <ArticleLayout title="Ausbildung">
       <SectionLayout title={'"Solides Fundament in Theorie & Praxis!"'}>
         <Group>
           <LogoTitleSubtitleCard

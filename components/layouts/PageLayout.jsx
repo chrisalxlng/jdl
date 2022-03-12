@@ -10,8 +10,9 @@ import {
   MediaQuery,
   Text,
 } from '@mantine/core';
-import Navigation from '../Navigation';
+import Navigation from '../routing/Navigation';
 import FooterLayout from './FooterLayout';
+import { getRoutes } from '../routing/routes';
 
 const useStyles = createStyles((theme) => ({
   navbar: {
@@ -39,34 +40,6 @@ const Logo = () => (
     </div>
   </Link>
 );
-
-const navLinks = [
-  { label: 'Home', path: '/', items: [] },
-  {
-    label: 'Leben',
-    path: '/leben',
-    items: [],
-  },
-  {
-    label: 'Interessen',
-    path: '/interessen',
-    items: [],
-  },
-  {
-    label: 'Background',
-    path: '/background',
-    items: [
-      { label: 'Ausbildung', path: '/ausbildung' },
-      { label: 'Berufliche Erfahrungen', path: '/berufliche-erfahrungen' },
-      { label: 'Social Engagements', path: '/social-engagements' },
-    ],
-  },
-  {
-    label: 'Kontakt',
-    path: '/kontakt',
-    items: [],
-  },
-];
 
 export default function PageLayout({ children }) {
   const { classes } = useStyles();
@@ -117,7 +90,7 @@ export default function PageLayout({ children }) {
                 />
               </MediaQuery>
               <div className={classes.links}>
-                <Navigation type="navbar" items={navLinks} />
+                <Navigation type="navbar" items={getRoutes()} />
               </div>
             </div>
           </Header>
@@ -128,7 +101,7 @@ export default function PageLayout({ children }) {
             width={{ base: '100%', sm: 0 }}
             hidden={!opened}
           >
-            <Navigation type="header" items={navLinks} />
+            <Navigation type="header" items={getRoutes()} />
           </Navbar>
         }
         sx={() => ({
