@@ -12,12 +12,14 @@ import { useMediaQuery } from '@mantine/hooks';
 import ArticleLayout from '../components/layouts/ArticleLayout';
 import PageLayout from '../components/layouts/PageLayout';
 import Image from '../components/utils/Image';
+import { getPath } from '../components/routing/routes';
 
 const kontakt = () => {
   const largerThanBreakpoint = useMediaQuery('(min-width: 850px)');
+  const [path] = getPath().splice(-1);
 
   return (
-    <PageLayout>
+    <PageLayout title={`jdlang.de - ${path.label}`}>
       <ArticleLayout title="Kontakt">
         <Group
           grow

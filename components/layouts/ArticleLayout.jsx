@@ -1,5 +1,5 @@
-import { Container, Title } from '@mantine/core';
 import React from 'react';
+import { Container, Title } from '@mantine/core';
 import Breadcrumb from '../utils/Breadcrumb';
 
 const ArticleLayout = ({ title, children }) => (

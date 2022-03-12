@@ -6,12 +6,14 @@ import TextLink from '../components/utils/TextLink';
 import Paragraph from '../components/utils/Paragraph';
 import SectionLayout from '../components/layouts/SectionLayout';
 import Image from '../components/utils/Image';
+import { getPath } from '../components/routing/routes';
 
 const home = () => {
   const largerThanBreakpoint = useMediaQuery('(min-width: 850px)');
+  const [path] = getPath().splice(-1);
 
   return (
-    <PageLayout>
+    <PageLayout title={`jdlang.de - ${path.label}`}>
       <Grid columns={10} gutter={0}>
         <Grid.Col
           span={largerThanBreakpoint ? 6 : 10}

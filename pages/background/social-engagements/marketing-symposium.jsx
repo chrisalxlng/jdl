@@ -4,17 +4,19 @@ import ArticleLayout from '../../../components/layouts/ArticleLayout';
 import PageLayout from '../../../components/layouts/PageLayout';
 import SectionLayout from '../../../components/layouts/SectionLayout';
 import ImagePreviewModal from '../../../components/modals/ImagePreviewModal';
+import { getPath } from '../../../components/routing/routes';
 import ButtonLink from '../../../components/utils/ButtonLink';
 import ImageCarousel from '../../../components/utils/ImageCarousel';
 import Paragraph from '../../../components/utils/Paragraph';
 import TextLink from '../../../components/utils/TextLink';
 
 const marketingSymposium = () => {
+  const [path] = getPath().splice(-1);
   const [imageModalOpened, setImageModalOpened] = useState(false);
   const showImage = () => setImageModalOpened(!imageModalOpened);
 
   return (
-    <PageLayout>
+    <PageLayout title={`jdlang.de - ${path.label}`}>
       <ImagePreviewModal
         opened={imageModalOpened}
         setOpened={setImageModalOpened}
