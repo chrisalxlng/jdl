@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Button, Container, Grid, Group, Text, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import PageLayout from '../components/layouts/PageLayout';
@@ -7,7 +8,6 @@ import Paragraph from '../components/utils/Paragraph';
 import SectionLayout from '../components/layouts/SectionLayout';
 import Image from '../components/utils/Image';
 import { getPath } from '../components/routing/routes';
-import Link from 'next/link';
 
 const home = () => {
   const largerThanBreakpoint = useMediaQuery('(min-width: 850px)');
