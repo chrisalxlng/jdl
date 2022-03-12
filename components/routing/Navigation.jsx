@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Button, Collapse, Menu, ChevronIcon, Text } from '@mantine/core';
+import { isActivePath } from './routes';
 
 const Navigation = ({ type, items }) => {
   const [opened, setOpened] = useState(-1);
-  const router = useRouter();
-
-  const isActivePath = (path) =>
-    path === '/' ? router.pathname === path : router.pathname.startsWith(path);
 
   return type === 'navbar' ? (
     <>
       {items.map((item) =>
-        item.items.length ? (
+        item.items ? (
           <Menu
             key={item.path}
             control={
@@ -53,7 +49,7 @@ const Navigation = ({ type, items }) => {
   ) : type === 'header' ? (
     <>
       {items.map((item, id) =>
-        item.items.length ? (
+        item.items ? (
           <div key={item.path} style={{ width: '100%' }}>
             <Button
               variant={isActivePath(item.path) ? 'light' : 'subtle'}
