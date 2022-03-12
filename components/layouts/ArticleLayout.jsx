@@ -6,7 +6,9 @@ const ArticleLayout = ({ title, children }) => (
   <Container sx={{ padding: '16px' }}>
     <Container padding={0} mt={20} mb={60}>
       <Breadcrumb />
-      <Title order={1}>{title}</Title>
+      <Title order={1} mt={10}>
+        {title}
+      </Title>
     </Container>
     {children}
   </Container>

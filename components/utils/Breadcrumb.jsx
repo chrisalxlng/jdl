@@ -8,11 +8,13 @@ const Breadcrumb = () => {
 
   const breadcrumbItems = path.map((item) =>
     item.hasOwnPage ? (
-      <TextLink href={item.path} key={item.path}>
-        {item.label}
-      </TextLink>
+      <Text size="sm" sx={{ lineHeight: 'inherit' }}>
+        <TextLink href={item.path} key={item.path}>
+          {item.label}
+        </TextLink>
+      </Text>
     ) : (
-      <Text sx={{ lineHeight: 'inherit' }} key={item.label}>
+      <Text size="sm" sx={{ lineHeight: 'inherit' }} key={item.label}>
         {item.label}
       </Text>
     )
