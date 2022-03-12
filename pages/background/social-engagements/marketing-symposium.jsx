@@ -44,7 +44,7 @@ const marketingSymposium = () => {
             meinen damaligen Kommilitonen Philipp Werner davon. Nachdem auch er
             spontan von dieser Idee begeistert war, beschlossen wir gemeinsam
             mit dieser Idee zu dem damaligen Lehrbeauftragten für die
-            praktischen Übungen zum Marketing Joachim Kellner (heute Professor
+            praktischen Übungen zum Marketing Joachim Kellner (später Professor
             für Marketing in Hamburg) zu gehen, um ihn einzuladen mitzumachen.
           </Paragraph>
           <Paragraph>
@@ -123,19 +123,35 @@ const marketingSymposium = () => {
             <TextLink href="/files/file-printkampagne.pdf" openNewTab>
               Printkampagne
             </TextLink>{' '}
-            wurde. Nach der Ausarbeitung eines inhaltlichen Konzeptes
-            (Lehrveranstaltungen) für diese Veranstaltung machten wir uns sehr
-            erfolgreich auf die Suche nach spendenfreudigen Sponsoren, und die
-            Tatsache, dass der &quot;Hochadel&quot; des deutschen Marketings,
-            neben Politik und Wissenschaft von unserem Vorhaben begeistert war,
-            machte das Überzeugen der Marketing-Abteilungen problemlos. Schnell
-            hatten wir ausreichend Sponsorengelder von Top-Markenartiklern
-            zusammen, so dass wir zu unserer ersten Presse-Konferenz, die auch
-            sehr gut besucht war, nach Leipzig laden konnten. So war es auch
-            nicht verwunderlich, dass im Vorfeld unseres Symposiums in vielen
-            Medien (überwiegend Presse, aber auch Radio und TV) darüber
-            berichtet wurde. Ein Teil davon haben wir in unserem Programmheft
-            dokumentiert. Weil dieses{' '}
+            wurde. Nach der Ausarbeitung eines inhaltlichen Konzeptes (
+            <TextLink href="/files/file-lehrveranstaltungen.pdf" openNewTab>
+              Lehrveranstaltungen
+            </TextLink>
+            ) für diese Veranstaltung machten wir uns sehr erfolgreich auf die
+            Suche nach spendenfreudigen{' '}
+            <TextLink href="/files/file-sponsoren.pdf" openNewTab>
+              Sponsoren
+            </TextLink>
+            , und die Tatsache, dass der{' '}
+            <TextLink href="/files/file-hochadel.pdf" openNewTab>
+              &quot;Hochadel&quot;
+            </TextLink>{' '}
+            des deutschen Marketings, neben{' '}
+            <TextLink href="/files/file-politik.pdf" openNewTab>
+              Politik
+            </TextLink>{' '}
+            und{' '}
+            <TextLink href="/files/file-wissenschaft.pdf" openNewTab>
+              Wissenschaft
+            </TextLink>{' '}
+            von unserem Vorhaben begeistert war, machte das Überzeugen der
+            Marketing-Abteilungen problemlos. Schnell hatten wir ausreichend
+            Sponsorengelder von Top-Markenartiklern zusammen, so dass wir zu
+            unserer ersten Presse-Konferenz, die auch sehr gut besucht war, nach
+            Leipzig laden konnten. So war es auch nicht verwunderlich, dass im
+            Vorfeld unseres Symposiums in vielen Medien (überwiegend Presse,
+            aber auch Radio und TV) darüber berichtet wurde. Ein Teil davon
+            haben wir in unserem Programmheft dokumentiert. Weil dieses{' '}
             <TextLink href="/files/file-programmheft.pdf" openNewTab>
               Programmheft
             </TextLink>{' '}
