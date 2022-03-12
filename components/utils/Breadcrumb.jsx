@@ -20,7 +20,7 @@ const Breadcrumb = () => {
     )
   );
 
-  return <Breadcrumbs>{breadcrumbItems}</Breadcrumbs>;
+  return <Breadcrumbs sx={{ flexWrap: 'wrap' }}>{breadcrumbItems}</Breadcrumbs>;
 };
 
 export default Breadcrumb;
