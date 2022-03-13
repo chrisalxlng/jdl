@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Button, Collapse, Menu, ChevronIcon, Text } from '@mantine/core';
@@ -8,10 +9,10 @@ const Navigation = ({ type, items }) => {
 
   return type === 'navbar' ? (
     <>
-      {items.map((item) =>
+      {items.map((item, index) =>
         item.items ? (
           <Menu
-            key={item.path}
+            key={index}
             control={
               <Button variant={isActivePath(item.path) ? 'light' : 'subtle'}>
                 {item.label}
@@ -20,8 +21,8 @@ const Navigation = ({ type, items }) => {
             trigger="hover"
             delay={50}
           >
-            {item.items.map((subitem) => (
-              <Menu.Item key={subitem.path}>
+            {item.items.map((subitem, innerIndex) => (
+              <Menu.Item key={innerIndex}>
                 {subitem.path ? (
                   <Link href={item.path + subitem.path}>
                     <Text
@@ -51,13 +52,16 @@ const Navigation = ({ type, items }) => {
             ))}
           </Menu>
         ) : item.path ? (
-          <Link key={item.path} href={item.path}>
+          <Link key={index} href={item.path}>
             <Button variant={isActivePath(item.path) ? 'light' : 'subtle'}>
               {item.label}
             </Button>
           </Link>
         ) : (
-          <Button variant={isActivePath(item.path) ? 'light' : 'subtle'}>
+          <Button
+            key={index}
+            variant={isActivePath(item.path) ? 'light' : 'subtle'}
+          >
             {item.label}
           </Button>
         )
@@ -67,7 +71,7 @@ const Navigation = ({ type, items }) => {
     <>
       {items.map((item, id) =>
         item.items ? (
-          <div key={item.path} style={{ width: '100%' }}>
+          <div key={id} style={{ width: '100%' }}>
             <Button
               variant={isActivePath(item.path) ? 'light' : 'subtle'}
               fullWidth
@@ -82,9 +86,9 @@ const Navigation = ({ type, items }) => {
               {item.label}
             </Button>
             <Collapse in={id === opened}>
-              {item.items.map((subitem) =>
+              {item.items.map((subitem, index) =>
                 subitem.path ? (
-                  <Link key={subitem.path} href={item.path + subitem.path}>
+                  <Link key={index} href={item.path + subitem.path}>
                     <Button
                       variant={
                         isActivePath(item.path + subitem.path)
@@ -104,6 +108,7 @@ const Navigation = ({ type, items }) => {
                   </Link>
                 ) : (
                   <Button
+                    key={index}
                     variant={
                       isActivePath(item.path + subitem.path)
                         ? 'light'
@@ -124,7 +129,7 @@ const Navigation = ({ type, items }) => {
             </Collapse>
           </div>
         ) : item.path ? (
-          <Link key={item.path} href={item.path}>
+          <Link key={id} href={item.path}>
             <Button
               variant={isActivePath(item.path) ? 'light' : 'subtle'}
               sx={() => ({
@@ -138,6 +143,7 @@ const Navigation = ({ type, items }) => {
           </Link>
         ) : (
           <Button
+            key={id}
             variant={isActivePath(item.path) ? 'light' : 'subtle'}
             sx={() => ({
               div: {

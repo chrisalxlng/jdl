@@ -55,7 +55,12 @@ const home = () => {
                     Dipl.-Kfm.
                   </Text>
                   <Title order={1}>
-                    <Text color="white" inherit sx={{ fontStyle: 'italic' }}>
+                    <Text
+                      color="white"
+                      inherit
+                      sx={{ fontStyle: 'italic' }}
+                      align="center"
+                    >
                       Joachim Dieter Lang
                     </Text>
                   </Title>
