@@ -6,7 +6,7 @@ import SectionLayout from '../../../components/layouts/SectionLayout';
 import ImagePreviewModal from '../../../components/modals/ImagePreviewModal';
 import { getPath } from '../../../components/routing/routes';
 import ButtonLink from '../../../components/utils/ButtonLink';
-import ImageCarousel from '../../../components/utils/ImageCarousel';
+import CoverflowImageCarousel from '../../../components/utils/CoverflowImageCarousel';
 import Paragraph from '../../../components/utils/Paragraph';
 import TextLink from '../../../components/utils/TextLink';
 
@@ -92,7 +92,7 @@ const marketingSymposium = () => {
           </Paragraph>
         </SectionLayout>
         <SectionLayout>
-          <ImageCarousel
+          <CoverflowImageCarousel
             images={[
               '/img/img-symposium_1.png',
               '/img/img-symposium_2.png',

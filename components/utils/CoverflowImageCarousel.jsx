@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-const ImageCarousel = ({ images }) => (
+const CoverflowImageCarousel = ({ images }) => (
   <Container
     padding={0}
     sx={(theme) => ({
@@ -51,5 +51,4 @@ const ImageCarousel = ({ images }) => (
   </Container>
 );
 
-export default ImageCarousel;
-// fit="contain"
+export default CoverflowImageCarousel;

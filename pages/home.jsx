@@ -6,8 +6,8 @@ import PageLayout from '../components/layouts/PageLayout';
 import TextLink from '../components/utils/TextLink';
 import Paragraph from '../components/utils/Paragraph';
 import SectionLayout from '../components/layouts/SectionLayout';
-import Image from '../components/utils/Image';
 import { getPath } from '../components/routing/routes';
+import BasicImageCarousel from '../components/utils/BasicImageCarousel';
 
 const home = () => {
   const largerThanBreakpoint = useMediaQuery('(min-width: 850px)');
@@ -97,7 +97,15 @@ const home = () => {
             size={400}
             sx={largerThanBreakpoint ? { height: '100%' } : { height: '200px' }}
           >
-            <Image src="/img/jdl_main.png" placeholder="blur" />
+            <BasicImageCarousel
+              images={[
+                '/img/jdl_hemd-ohne-krawatte.png',
+                '/img/jdl_lederjacke-dunkel.png',
+                '/img/jdl_lederjacke.png',
+                '/img/jdl_main.png',
+              ]}
+              height={largerThanBreakpoint ? 250 : 200}
+            />
           </Container>
         </Grid.Col>
       </Grid>
