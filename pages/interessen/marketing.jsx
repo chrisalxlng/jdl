@@ -52,11 +52,19 @@ const marketing = () => {
                 Anfang an die wissenschaftliche Theorie mit der Praxis zu
                 verbinden“. Nach Abschluss seines Studiums wurde JDL Mitglied
                 der Ehemaligen-Organisation MTP-Alumni e.V., die er von
-                1992-1994 als deren 1. Vorsitzender führte.
+                1992-1994 als deren{' '}
+                <TextLink href="/files/file-mtp_alumni.pdf" openNewTab>
+                  1. Vorsitzender
+                </TextLink>{' '}
+                führte.
               </Text>
             </Timeline.Item>
             <Timeline.Item title="Anno 1989/1990">
               <Text size="sm">
+                <TextLink href="/files/file-programmheft.pdf" openNewTab>
+                  1. Marketing-Symposium Frankfurt-Leipzig (von Studenten für
+                  Studenten).
+                </TextLink>{' '}
                 Ein außergewöhnliches Projekt, das Deutsch-deutsche
                 Marketing-Geschichte schrieb…{' '}
                 <TextLink

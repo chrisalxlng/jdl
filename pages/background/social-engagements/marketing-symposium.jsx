@@ -7,6 +7,7 @@ import ImagePreviewModal from '../../../components/modals/ImagePreviewModal';
 import { getPath } from '../../../components/routing/routes';
 import ButtonLink from '../../../components/utils/ButtonLink';
 import CoverflowImageCarousel from '../../../components/utils/CoverflowImageCarousel';
+import Image from '../../../components/utils/Image';
 import Paragraph from '../../../components/utils/Paragraph';
 import TextLink from '../../../components/utils/TextLink';
 
@@ -24,7 +25,7 @@ const marketingSymposium = () => {
         title={'Mein "Creative Pool"'}
         caption="Die besten Ideen kommen mir, wenn mir das Wasser bis zum Hals steht..."
       />
-      <ArticleLayout title="Marketing Symposium">
+      <ArticleLayout title="1. Marketing Symposium Frankfurt-Leipzig (von Studenten für Studenten)">
         <SectionLayout
           title="Ein Stück Deutsch-deutsche Marketing-Geschichte..."
           type="paragraph"
@@ -195,6 +196,7 @@ const marketingSymposium = () => {
           </Paragraph>
         </SectionLayout>
         <SectionLayout>
+          <Image src="/img/img-helmut-kohl.png" height={150} />
           <Blockquote cite="– Grußwort des damaligen Bundeskanzler, Dr. Helmut Kohl (April 1990)">
             Ihrer Veranstaltung wünsche ich im Interesse der Menschen sowie
             unseres ganzen Landes einen erfolgreichen Verlauf.

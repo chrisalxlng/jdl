@@ -21,19 +21,16 @@ const kontakt = () => {
   return (
     <PageLayout title={`jdlang.de - ${path.label}`}>
       <ArticleLayout title="Kontakt">
-        <Group
-          grow
-          spacing={100}
-          align="flex-start"
-          direction={largerThanBreakpoint ? 'row' : 'column-reverse'}
-        >
-          <Box sx={{ width: '100%', height: '400px' }}>
-            <Container
-              sx={{ position: 'relative', width: '100%', height: '100%' }}
-            >
-              <Image src="/svg/envelope.svg" />
-            </Container>
-          </Box>
+        <Group grow spacing={100} align="flex-start" direction="row">
+          {largerThanBreakpoint ? (
+            <Box sx={{ width: '100%', height: '400px' }}>
+              <Container
+                sx={{ position: 'relative', width: '100%', height: '100%' }}
+              >
+                <Image src="/svg/envelope.svg" />
+              </Container>
+            </Box>
+          ) : null}
           <Box
             sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}
           >

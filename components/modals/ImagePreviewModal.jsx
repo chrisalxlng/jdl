@@ -16,7 +16,7 @@ const ImagePreviewModal = ({
     centered
     sx={() => ({
       '.mantine-Modal-body': {
-        height: '60vh',
+        height: '400px',
       },
     })}
   >
