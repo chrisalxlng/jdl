@@ -7,9 +7,11 @@ import { isActivePath } from './routes';
 const Navigation = ({ type, items }) => {
   const [opened, setOpened] = useState(-1);
 
+  const filteredItems = items.filter((item) => item.includeInNavigation);
+
   return type === 'navbar' ? (
     <>
-      {items.map((item, index) =>
+      {filteredItems.map((item, index) =>
         item.items ? (
           <Menu
             key={index}
@@ -69,7 +71,7 @@ const Navigation = ({ type, items }) => {
     </>
   ) : type === 'header' ? (
     <>
-      {items.map((item, id) =>
+      {filteredItems.map((item, id) =>
         item.items ? (
           <div key={id} style={{ width: '100%' }}>
             <Button

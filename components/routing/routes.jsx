@@ -103,6 +103,13 @@ export const getRoutes = () => [
     hasOwnPage: true,
     includeInNavigation: true,
   },
+  {
+    label: 'Schöpferische Kreativität',
+    path: '/schoepferische-kreativitaet',
+    items: null,
+    hasOwnPage: true,
+    includeInNavigation: false,
+  },
 ];
 
 export const isActivePath = (path) => {

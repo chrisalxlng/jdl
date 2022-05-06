@@ -47,10 +47,14 @@ const marketing = () => {
                 </TextLink>
                 : Bereits während seines ersten Semesters schloss sich JDL „aus
                 innerer Überzeugung“ der studentischen Marketing-Initiative „MTP
-                Marketing zwischen Theorie &amp; Praxis e.V.“ an der Goethe-
-                Universität Frankfurt/Main an. JDL war es „ein Anliegen, von
-                Anfang an die wissenschaftliche Theorie mit der Praxis zu
-                verbinden“. Nach Abschluss seines Studiums wurde JDL Mitglied
+                Marketing zwischen Theorie &amp; Praxis e.V.“ an der
+                Goethe-Universität Frankfurt/Main an. JDL war es „ein Anliegen,
+                von Anfang an die wissenschaftliche Theorie mit der Praxis zu
+                verbinden und seinen Sinn für Gestaltungswillen und{' '}
+                <TextLink href="/schoepferische-kreativitaet">
+                  schöpferische Kreativität
+                </TextLink>{' '}
+                einzubringen“. Nach Abschluss seines Studiums wurde JDL Mitglied
                 der Ehemaligen-Organisation MTP-Alumni e.V., die er von
                 1992-1994 als deren{' '}
                 <TextLink href="/files/file-mtp_alumni.pdf" openNewTab>
