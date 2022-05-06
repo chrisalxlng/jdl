@@ -197,7 +197,17 @@ const marketingSymposium = () => {
         </SectionLayout>
         <SectionLayout>
           <Image src="/img/img-helmut-kohl.png" height={150} />
-          <Blockquote cite="– Grußwort des damaligen Bundeskanzler, Dr. Helmut Kohl (April 1990)">
+          <Blockquote
+            cite={
+              <div>
+                –{' '}
+                <TextLink href="/files/file-grusswort.pdf" openNewTab>
+                  Grußwort
+                </TextLink>{' '}
+                des damaligen Bundeskanzler, Dr. Helmut Kohl (April 1990)
+              </div>
+            }
+          >
             Ihrer Veranstaltung wünsche ich im Interesse der Menschen sowie
             unseres ganzen Landes einen erfolgreichen Verlauf.
           </Blockquote>
